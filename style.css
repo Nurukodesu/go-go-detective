@@ -26,10 +26,11 @@ body {
 
 .card {
 	display: block;
+	justify-content: center;
 	background-color: peru;
 	box-shadow: 1px 1px 12px brown;
 	border-radius: 20px;
-	width: 120;
+	width: 120px;
 	height: 80px;
 	margin-left: 25px;
 	margin-right: 25px;
@@ -62,4 +63,8 @@ a {
 	width: 200px;
 	height: 200px;
 	border-radius: 70%;
+}
+
+#back {
+	display: flex;
 }
