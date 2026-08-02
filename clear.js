@@ -1,7 +1,5 @@
-console.log(localStorage.getItem("cleared"))
-
-let cleared = JSON.parse(localStorage.getItem("cleared"));
 let hasInit = false;
+let cleared = JSON.parse(localStorage.getItem("cleared"));
 
 if (cleared == null){
 	localStorage.setItem("cleared", JSON.stringify([]));
@@ -17,4 +15,4 @@ cleared.forEach(level => {
 	stagename.innerHTML = "<p>Level" + level + "✅</p>"
 });
 
-console.log(localStorage.getItem("cleared"))
+localStorage.setItem("cleared", JSON.stringify(Array.from(new Set(cleared))));
