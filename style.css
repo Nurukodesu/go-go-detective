@@ -1,0 +1,62 @@
+body {
+	background-image: url("asset/bg.gif");
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#main {
+	display: block;
+	justify-content: center;
+}
+
+#levels {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	overflow-y: scroll;
+	scrollbar-width: none;
+	width: 40%;
+	height: 90vh;
+	margin-left: 30%;
+	margin-right: 20%;
+	margin-top: 3%;
+}
+
+.card {
+	display: block;
+	background-color: peru;
+	box-shadow: 1px 1px 12px brown;
+	border-radius: 20px;
+	width: 120;
+	height: 80px;
+	margin-left: 25px;
+	margin-right: 25px;
+	margin-top: 5px;
+}
+
+.card:hover {
+	box-shadow: 0px 0px 5px red;
+}
+
+.name {
+	color: black;
+	font-size: x-large;
+	text-align: center;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+.logo img {
+	position: fixed;
+	width: 200px;
+	height: 200px;
+	border-radius: 70%;
+	margin-top: 200px;
+	margin-left: 100px;
+}
