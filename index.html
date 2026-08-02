@@ -1,63 +1,41 @@
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="style.css">
+	<style>
+		body {
+			background-image: url("asset/intro.gif");
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+		
+		.fixed {
+			width: 30vw;
+			height: 7vh;
+			display: flex;
+			position: fixed;
+			margin-left: 35vw;
+			margin-top: 70vh;
+		}
+	</style>
 </head>
-
 <body>
-	<div id="main">
-		<div class="logo">
-			<img src="asset/logo.png" alt="">
-		</div>
-		<div id="levels">
-			<a id="lvl1" class="card" href="levels/1.html">
-				<div class="name">
-					<p>Level 1</p>
-				</div>
-			</a>
-
-			<a id="lvl2" class="card" href="levels/2.html">
-				<div class="name">
-					<p>Level 2</p>
-				</div>
-			</a>
-			<a id="lvl3" class="card" href="">
-				<div class="name">
-					<p>Level 3</p>
-				</div>
-			</a>
-			<a id="lvl4" class="card" href="">
-				<div class="name">
-					<p>Level 4</p>
-				</div>
-			</a>
-			<a id="lvl5" class="card" href="">
-				<div class="name">
-					<p>Level 5</p>
-				</div>
-			</a>
-			<a id="lvl6" class="card" href="">
-				<div class="name">
-					<p>Level 6</p>
-				</div>
-			</a>
-			<a id="lvl7" class="card" href="">
-				<div class="name">
-					<p>Level 7</p>
-				</div>
-			</a>
-			<a id="lvl8" class="card" href="levels/8.html">
-				<div class="name">
-					<p>Level 8</p>
-				</div>
-			</a>
-		</div>
-
+	<div class="fixed">
+		<a class="card" href="levelselector.html">
+			<div class="name">
+				<p>Play</p>
+			</div>
+		</a>
+		
+		<a href="" class="card">
+			<div class="name">
+				<p>Puzzle Rush</p>
+			</div>
+		</a>
 	</div>
-	<script src="clear.js"></script>
 </body>
-
 </html>
