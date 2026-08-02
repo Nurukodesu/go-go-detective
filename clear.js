@@ -1,7 +1,7 @@
 let cleared = JSON.parse(localStorage.getItem("cleared"));
 let hasInit = false;
 
-if (!hasInit){
+if (cleared != null){
 	localStorage.setItem("cleared", JSON.stringify([]));
 }
 
