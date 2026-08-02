@@ -52,11 +52,14 @@ a {
 	text-decoration: none;
 }
 
-.logo img {
+.logo {
 	position: fixed;
+	margin-top: 120px;
+	margin-left: 100px;
+}
+
+.logo img {
 	width: 200px;
 	height: 200px;
 	border-radius: 70%;
-	margin-top: 200px;
-	margin-left: 100px;
 }
