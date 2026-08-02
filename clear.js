@@ -1,10 +1,11 @@
 let cleared = JSON.parse(localStorage.getItem("cleared"));
 let hasInit = false;
-let score = cleared.length;
 
 if (!hasInit){
 	localStorage.setItem("cleared", JSON.stringify([]));
 }
+
+let score = cleared.length;
 
 cleared.forEach(level => {
 	let stage = document.getElementById("lvl"+level);
