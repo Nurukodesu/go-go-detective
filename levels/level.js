@@ -16,7 +16,6 @@ let exit = document.getElementById("exit");
 let clrn = "cleared";
 let ispzrush = JSON.parse(localStorage.getItem("isPuzzleRush"));
 if (ispzrush) {
-	hint.style.display = "none";
 	clrn = "pzrcleared";
 	let timerID = setInterval(() => {
 		time--;
@@ -117,13 +116,17 @@ function incorrect(level, box) {
 function showHint(hint) {
 	if (hintOpened) {
 		exptext.innerText = explanation;
-		expbox.style.display = "none";
+		if (!(ispzrush && hasAnswered)) expbox.style.display = "none";
+		if ((lvl != 8 || ispzrush) && expbox.style.borderColor != "red"){
+			nextbtn.style.display = "block";
+		}
+		homebtn.style.display = "block";
 		hintOpened = false;
 	} else {
 		explanation = exptext.innerText;
 		exptext.innerText = hint;
 		expbox.style.display = "block";
-		if (nextbtn != null) {
+		if (lvl != 8 || ispzrush) {
 			nextbtn.style.display = "none";
 		}
 		homebtn.style.display = "none";

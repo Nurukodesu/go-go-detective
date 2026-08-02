@@ -74,6 +74,7 @@ body {
 
 #hint{
 	position:fixed;
+	left: 30px;
 	top: 100px;
 }
 
@@ -87,6 +88,7 @@ body {
 
 #timer{
 	position: fixed;
+	left: 30px;
 	top: 200px;
 	width: 80px;
 	height: 80px;
