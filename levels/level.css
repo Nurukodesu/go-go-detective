@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	padding-bottom: 50px;
 	background-image: url("../asset/bg.gif");
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -22,7 +23,7 @@ body {
 
 .card {
 	width: 300px;
-	height: 250px;
+	height: 500px;
 	margin: 3px;
 }
 
@@ -31,11 +32,6 @@ body {
 	height: 300px;
 }
 
-.card button{
-	width: 80%;
-	height: 50px;
-	font-size: x-large;
-}
 
 #explanation{
 	position: fixed;
@@ -78,7 +74,7 @@ body {
 
 #hint{
 	position:fixed;
-	margin-top: 20vh;
+	top: 100;
 }
 
 #hint button{
@@ -87,4 +83,20 @@ body {
 	font-size: large;
 	border-radius: 50%;
 	background-color: orange;
+}
+
+#choices {
+	width: 90vw;
+	height: 50px;
+	position: fixed;
+	display: flex;
+	bottom: 50;
+}
+
+#choices button{
+	width: 80%;
+	height: 100%;
+	font-size: x-large;
+	margin-left: 10%;
+	border-radius: 30px;
 }

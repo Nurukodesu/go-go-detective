@@ -55,16 +55,13 @@ a {
 
 .logo {
 	position: fixed;
-	margin-top: 120px;
-	margin-left: 100px;
+	top: 120;
+	left: 100;
 }
 
 .logo img {
 	width: 200px;
 	height: 200px;
 	border-radius: 70%;
-}
-
-#back {
-	display: flex;
+	margin-bottom: 20px;
 }

@@ -29,7 +29,7 @@ function showScore() {
 	score = cleared.size;
 	exptext.innerText = "You have cleared " + score + " out of 8 questions!";
 	localStorage.setItem(clrn, "[]");
-	goHome();
+	homebtn.onclick = goHome;
 }
 
 function goHome(){
