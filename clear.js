@@ -1,6 +1,7 @@
 let hasInit = false;
 let cleared = JSON.parse(localStorage.getItem("cleared"));
 
+localStorage.setItem("isPuzzleRush", false);
 if (cleared == null){
 	localStorage.setItem("cleared", JSON.stringify([]));
 }

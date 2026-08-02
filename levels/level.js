@@ -2,6 +2,7 @@ let hintOpened = false;
 let hasAnswered = false;
 let lvl = 0;
 let explanation = "";
+let time = 90;
 
 let expbox = document.getElementById("explanation");
 let result = document.getElementById("result");
@@ -9,36 +10,62 @@ let nextbtn = document.getElementById("next");
 let homebtn = document.getElementById("home");
 let exptext = document.getElementById("exptext");
 let hint = document.getElementById("Hint");
+let timer = document.getElementById("timer");
+let exit = document.getElementById("exit");
 
 let clrn = "cleared";
 let ispzrush = JSON.parse(localStorage.getItem("isPuzzleRush"));
 if (ispzrush) {
 	hint.style.display = "none";
 	clrn = "pzrcleared";
+	let timerID = setInterval(() => {
+		time--;
+		timer.innerHTML = "<p>" + time + "</p>";
+		if (time < 10) {
+			timer.style.boxShadow = "0px 0px 15px red";
+		} else if (time < 30) {
+			timer.style.boxShadow = "0px 0px 15px yellow"
+		} else {
+			timer.style.boxShadow = "0px 0px 15px green";
+		}
+		if (time == 0) {
+			clearInterval(timerID);
+			timesout();
+		}
+	}, 1000);
 }
-let home = (ispzrush)?"../index.html":"../levelselector.html";
-console.log(home);
+let home = (ispzrush) ? "../index.html" : "../levelselector.html";
 
-homebtn.onclick = (ispzrush)?showScore:goHome;
+homebtn.onclick = (ispzrush) ? showScore : goHome;
+exit.onclick = goHome;
 nextbtn.onclick = nextLevel;
 
 let cleared = new Set(JSON.parse(localStorage.getItem(clrn)));
 
+function timesout() {
+	result.innerText = "⏰️ Time's out!";
+	expbox.style.borderColor = "red";
+	nextbtn.style.display = "none";
+	homebtn.style.backgroundColor = "red";
+	expbox.style.display = "block";
+	hasAnswered = true;
+	homebtn.onclick = goHome;
+}
+
 function showScore() {
-	localStorage.setItem("isPuzzleRush", false);
 	score = cleared.size;
 	exptext.innerText = "You have cleared " + score + " out of 8 questions!";
 	localStorage.setItem(clrn, "[]");
 	homebtn.onclick = goHome;
 }
 
-function goHome(){
+function goHome() {
 	window.location.replace(home);
 }
 
 function nextLevel() {
-	if (ispzrush&&cleared.size==7) {
-		showScore(home);	
+	if (ispzrush && cleared.size == 7) {
+		showScore(home);
 	}
 	let nextlvl = (ispzrush) ? getRandomLvl() : lvl + 1;
 	window.location.replace(nextlvl + ".html");
@@ -70,9 +97,6 @@ function correct(level, box) {
 		nextbtn.style.display = "none";
 	} else {
 		nextbtn.style.display = "block";
-	}
-
-	if (!ispzrush) {
 	}
 
 	homebtn.style.backgroundColor = "lightgreen";
