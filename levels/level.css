@@ -75,3 +75,16 @@ body {
 	position: fixed;
 	margin-right: auto;
 }
+
+#hint{
+	position:fixed;
+	margin-top: 20vh;
+}
+
+#hint button{
+	width: 80px;
+	height: 80px;
+	font-size: large;
+	border-radius: 50%;
+	background-color: orange;
+}

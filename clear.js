@@ -12,5 +12,5 @@ cleared.forEach(level => {
 	stage.style.boxShadow = "0px 0px 12px green"
 	let stagename = stage.getElementsByClassName("name").item(0);
 	stagename.style.color = "green";
-	stagename.innerHTML = "<p>Level 1✅</p>"
+	stagename.innerHTML = "<p>Level" + level + "✅</p>"
 });

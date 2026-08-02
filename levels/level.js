@@ -27,3 +27,14 @@ function checkAns(level, ans, choice, btnc){
 	}
 	expbox.style.display="block";
 }
+
+function showHint(hint){
+	let nextbtn = document.getElementById("next");
+	let homebtn = document.getElementById("home");
+	let exptext = document.getElementById("exptext");
+	let expbox = document.getElementById("explanation")
+	exptext.innerText = hint;
+	expbox.style.display = "block";
+	nextbtn.style.display = "none";
+	homebtn.style.display = "none";
+}
