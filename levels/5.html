@@ -9,10 +9,11 @@
 
 <body>
 	<div id="Hint">
-		<button onclick='showHint("မေးခွန်းတွင် ပါဝင်သော ပစ္စည်းများ၏ အလုပ်လုပ်ပုံကို ကောင်းစွာနားလည်ရန်လိုအပ်သည်။")'>❓️Hint</button>
+		<button
+			onclick='showHint("မေးခွန်းတွင် ပါဝင်သော ပစ္စည်းများ၏ အလုပ်လုပ်ပုံကို ကောင်းစွာနားလည်ရန်လိုအပ်သည်။")'>❓️Hint</button>
 	</div>
 	<div class="main">
-			<h2>Case 5# လည်တော့လည်တယ် တစ်ပတ်မပြည့်ဘူး အမှု</h2>
+		<h2>Case 5# လည်တော့လည်တယ် တစ်ပတ်မပြည့်ဘူး အမှု</h2>
 		<p id="story">
 			ရဲတပ်ဖွဲ့သည် လူသတ်မှုဖြစ်ပွားရာနေရာသို့ ရောက်ရှိလာခဲ့သည်။ ထိုနေရာတွင် ဦးခေါင်းကို သေနတ်မှန်ထားသော
 			အလောင်းတစ်ခုနှင့် ရုပ်အလောင်း၏ ညာဘက်လက်အနီး ကြမ်းပြင်ပေါ်တွင် သေနတ်တစ်လက်ကို တွေ့ရှိရသည်။ ရဲတပ်ဖွဲ့က
@@ -29,7 +30,6 @@
 						​ရေရေရာရာ မသိနိုင်ပါ
 					</p>
 				</div>
-				<button id="ans1" onclick="checkAns(5, false, 1)">A</button>
 			</div>
 			<div class="card">
 				<img src="../asset/level5/2.jpg" alt="">
@@ -38,7 +38,6 @@
 						​သေကြောင်းကြံစည်မှု
 					</p>
 				</div>
-				<button id="ans2" onclick="checkAns(5, false, 2)">B</button>
 			</div>
 			<div class="card">
 				<img src="../asset/level5/3.jpg" alt="">
@@ -47,14 +46,14 @@
 						လူသတ်မှု
 					</p>
 				</div>
-				<button id="ans3" onclick="checkAns(5, true, 3)">C</button>
 			</div>
 		</div>
 
 		<div id="explanation">
 			<p id="result"></p>
 			<p id="exptext">
-				အကယ်၍ ထိုသူသည် အသံဖမ်းနေစဉ် မိမိကိုယ်ကို ပစ်ခတ်ခဲ့ပါက အသံဖိုင်ကို ပြန်လည်နားထောင်နိုင်ရန်အတွက် အခြားသူတစ်ဦးဦးက ကက်ဆက်ကြိုးပြား (အသံဖမ်းခွေ) ကို အစသို့ ပြန်ရစ်ပေးခဲ့ရမည် ဖြစ်သည်။
+				အကယ်၍ ထိုသူသည် အသံဖမ်းနေစဉ် မိမိကိုယ်ကို ပစ်ခတ်ခဲ့ပါက အသံဖိုင်ကို ပြန်လည်နားထောင်နိုင်ရန်အတွက်
+				အခြားသူတစ်ဦးဦးက ကက်ဆက်ကြိုးပြား (အသံဖမ်းခွေ) ကို အစသို့ ပြန်ရစ်ပေးခဲ့ရမည် ဖြစ်သည်။
 			</p>
 			<div class="flex">
 				<a href="../levelselector.html" id="home">Home</a>
@@ -62,6 +61,11 @@
 			</div>
 		</div>
 
+	</div>
+	<div id="choices">
+		<button id="ans1" onclick="checkAns(5, false, 1)">A</button>
+		<button id="ans2" onclick="checkAns(5, false, 2)">B</button>
+		<button id="ans3" onclick="checkAns(5, true, 3)">C</button>
 	</div>
 	<script src="level.js"></script>
 </body>
