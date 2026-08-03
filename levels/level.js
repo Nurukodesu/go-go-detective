@@ -3,6 +3,7 @@ let hasAnswered = false;
 let lvl = 0;
 let explanation = "";
 let time = 90;
+let resbk
 
 let expbox = document.getElementById("explanation");
 let result = document.getElementById("result");
@@ -115,6 +116,7 @@ function incorrect(level, box) {
 
 function showHint(hint) {
 	if (hintOpened) {
+		result.innerText = resbk;
 		exptext.innerText = explanation;
 		if (!(ispzrush && hasAnswered)) expbox.style.display = "none";
 		if ((lvl != 8 || ispzrush) && expbox.style.borderColor != "red"){
@@ -123,6 +125,7 @@ function showHint(hint) {
 		homebtn.style.display = "block";
 		hintOpened = false;
 	} else {
+		resbk = result.innerText;
 		explanation = exptext.innerText;
 		exptext.innerText = hint;
 		expbox.style.display = "block";
