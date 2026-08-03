@@ -14,10 +14,13 @@ let hint = document.getElementById("Hint");
 let timer = document.getElementById("timer");
 let exit = document.getElementById("exit");
 
+timer.style.display = "none";
+
 let clrn = "cleared";
 let ispzrush = JSON.parse(localStorage.getItem("isPuzzleRush"));
 if (ispzrush) {
 	clrn = "pzrcleared";
+	timer.style.display = "block";
 	let timerID = setInterval(() => {
 		time--;
 		timer.innerHTML = "<p>" + time + "</p>";
@@ -128,6 +131,7 @@ function showHint(hint) {
 		resbk = result.innerText;
 		explanation = exptext.innerText;
 		exptext.innerText = hint;
+		result.innerHTML = "Hint";
 		expbox.style.display = "block";
 		if (lvl != 8 || ispzrush) {
 			nextbtn.style.display = "none";
